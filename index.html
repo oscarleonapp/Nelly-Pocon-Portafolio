@@ -1,221 +1,313 @@
 <!DOCTYPE html>
-<html lang="es">
-
-<head>
-    <!-- Anuncios Google -->
-    <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-8805383393891554" crossorigin="anonymous"></script>
-
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
-    <!--=============== FAVICON ===============-->
-    <link rel="shortcut icon" href="assets/img/pefil.jpg" type="image/x-icon">
-
-    <!--=============== REMIX ICONS ===============-->
-    <link href="https://cdn.jsdelivr.net/npm/remixicon@2.5.0/fonts/remixicon.css" rel="stylesheet">
+<html lang="es-ES" data-bs-theme="light">
+  <head>
+    <base href="">
+    <meta charset="utf-8">
+    <title>Nelly Pocón | Tramite de Visa de Turista y de Negocios | Renovaciones</title>
+    <link rel="icon" type="image/png" sizes="16x16"  href="assets/img/logo/fav.png">
+    <meta name="msapplication-TileColor" content="#ffffff">
+    <meta name="theme-color" content="#ffffff">
+    
+    <link rel="stylesheet" media="screen" href="assets/vendor/boxicons/css/boxicons.min.css">
+    <link rel="stylesheet" media="screen" href="assets/vendor/swiper/swiper-bundle.min.css">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+    <!-- Main Theme Styles + Bootstrap-->
+    <link rel="stylesheet" media="screen" href="assets/css/theme.min.css">
+  <!-- Page loading styles -->
+  <style>
+    .page-loading {
+      position: fixed;
+      top: 0;
+      right: 0;
+      bottom: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      -webkit-transition: all .4s .2s ease-in-out;
+      transition: all .4s .2s ease-in-out;
+      background-color: #fff;
+      opacity: 0;
+      visibility: hidden;
+      z-index: 9999;
+    }
+    [data-bs-theme="dark"] .page-loading {
+      background-color: #0b0f19;
+    }
+    .page-loading.active {
+      opacity: 1;
+      visibility: visible;
+    }
+    .page-loading-inner {
+      position: absolute;
+      top: 50%;
+      left: 0;
+      width: 100%;
+      text-align: center;
+      -webkit-transform: translateY(-50%);
+      transform: translateY(-50%);
+      -webkit-transition: opacity .2s ease-in-out;
+      transition: opacity .2s ease-in-out;
+      opacity: 0;
+    }
+    .page-loading.active > .page-loading-inner {
+      opacity: 1;
+    }
+    .page-loading-inner > span {
+      display: block;
+      font-size: 1rem;
+      font-weight: normal;
+      color: #9397ad;
+    }
+    [data-bs-theme="dark"] .page-loading-inner > span {
+      color: #fff;
+      opacity: .6;
+    }
+    .page-spinner {
+      display: inline-block;
+      width: 2.75rem;
+      height: 2.75rem;
+      margin-bottom: .75rem;
+      vertical-align: text-bottom;
+      border: .15em solid #b4b7c9;
+      border-right-color: transparent;
+      border-radius: 50%;
+      -webkit-animation: spinner .75s linear infinite;
+      animation: spinner .75s linear infinite;
+    }
+    [data-bs-theme="dark"] .page-spinner {
+      border-color: rgba(255,255,255,.4);
+      border-right-color: transparent;
+    }
+    @-webkit-keyframes spinner {
+      100% {
+        -webkit-transform: rotate(360deg);
+        transform: rotate(360deg);
+      }
+    }
+    @keyframes spinner {
+      100% {
+        -webkit-transform: rotate(360deg);
+        transform: rotate(360deg);
+      }
+    }
+  </style>
+  <!-- Page loading scripts -->
+  <script>
+    (function () {
+      window.onload = function () {
+        const preloader = document.querySelector('.page-loading');
+        preloader.classList.remove('active');
+        setTimeout(function () {
+          preloader.remove();
+        }, 1000);
+      };
+    })();
+  </script>
 
-    <!--=============== CSS ===============-->
-    <link rel="stylesheet" href="assets/css/styles.css">
-
-
-    <title>Nelly Pocon</title>
+  
 </head>
+<style>
 
+@keyframes crecer {
+            0%, 100% {
+                transform: scale(1);
+            }
+            50% {
+                transform: scale(1.1);
+            }
+        }
+
+        .boton-animado {
+            background-color: #d63b98;
+            color: white;
+            border: none;
+            padding: 15px 30px;
+            font-size: 16px;
+            cursor: pointer;
+            animation: crecer 1s infinite;
+          }
+</style>
+<!-- Body -->
 <body>
-    <!--=============== HEADER PROFILE ===============-->
-    <header class="profile container">
-        <!-- Theme button -->
-        <i class="ri-moon-line change-theme" id="theme-button"></i>
 
-        <div class="profile_container grid">
-            <div class="profile_data">
-                <div class="profile_border">
-                    <div class="profile_perfil">
-                        <!-- Imagen de perfil -->
-                        <img src="assets/img/pefil.jpg" alt="">
-                    </div>
-                </div>
+  <!-- Page loading spinner -->
+  <div class="page-loading active">
+    <div class="page-loading-inner">
+      <div class="page-spinner"></div><span>Loading...</span>
+    </div>
+  </div>
 
-                <h2 class="profile_name">Nelly Pocon</h2>
-                <h3 class="profile_profession">Profesión XXXXXXXX</h3>
 
-                <ul class="profile_social">
-                    <a href="https://www.oscardev-fe.com/" target="_blank" class="profile_social-link">
-                        <i class="ri-instagram-line"></i>
-                    </a>
+  <!-- Page wrapper for sticky footer -->
+  <!-- Wraps everything except footer to push footer to the bottom of the page if there is little content -->
+  <main class="page-wrapper">
 
-                    <a href="https://www.oscardev-fe.com/" target="_blank" class="profile_social-link">
-                        <i class="ri-github-line"></i>
-                    </a>
-
-                    <a href="https://www.oscardev-fe.com/" target="_blank" class="profile_social-link">
-                        <i class="ri-youtube-line"></i>
-                    </a>
-                </ul>
-            </div>
-
-            <div class="profile_info grid">
-
-                <div class="profile_info-group">
-                    <h3 class="profile_info-number">7</h3>
-                    <p class="profile_info-description">Años <br> laborales</p>
-                </div>
-
-                <div class="profile_info-group">
-                    <h3 class="profile_info-number">+12</h3>
-                    <p class="profile_info-description">Proyectos <br> completados</p>
-                </div>
-
-                <div class="profile_info-group">
-                    <h3 class="profile_info-number">9</h3>
-                    <p class="profile_info-description">Clientes <br> satisfechos</p>
-                </div>
-
-            </div>
-            <!-- Area de CV -->
-            <div class="profile_buttons">
-                <a download="" href="#" class="button" style="background-color: #2db859;">
-                    Más Información <i class="bi bi-whatsapp"></i></i>
-                </a>
-                <!-- Contacto -->
-                <div class="profile_buttons-small">
-                    <a target="_blank" href="#" class="button button_small button_gray"><i class="bi bi-instagram"></i></i></a>
-                    <a target="_blank" href="#" class="button button_small button_gray"><i class="ri-messenger-line"></i></a>
-                </div>
-            </div>
+    <!-- Navbar -->
+    <!-- Remove "navbar-sticky" class to make navigation bar scrollable with the page -->
+    <header class="header navbar navbar-expand-lg navbar-dark position-absolute navbar-sticky" style="background-color: #0a3161;">
+      <div class="container px-3">
+        <a href="ht#" class="navbar-brand pe-3">
+          <!-- <img src="assets/img/logo/" width="120" alt="Silicon"> -->
+           NELLY POCÓN
+        </a>
+        <div id="navbarNav" class="offcanvas offcanvas-end bg-dark">
+          <div class="offcanvas-header border-bottom border-light">
+            <h5 class="offcanvas-title text-white">Menu</h5>
+            <button type="button" class="btn-close btn-close-white" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+          </div>
+          <div class="offcanvas-body">
+            <ul class="navbar-nav me-auto mb-2 mb-lg-0 justify-content-center">
+              <li class="nav-item">
+                <a href="#" class="nav-link">Home</a>
+              </li>
+              <li class="nav-item">
+                <a href="#" class="nav-link">Acerca de mi</a>
+              </li>
+              <li class="nav-item">
+                <a href="#" class="nav-link">Visa Turismo</a>
+              </li>
+              <li class="nav-item">
+                <a href="#" class="nav-link">Visa Negocios</a>
+              </li>
+              <li class="nav-item">
+                <a href="#" class="nav-link">Renovación</a>
+              </li>
+            </ul>
+          </div>
+          
+          <div class="offcanvas-header border-top border-light">
+            <a href="#" class="btn btn-primary w-100" target="_blank" rel="noopener" style="background-color: #bf0a30;">
+              &nbsp;Más Información
+            </a>
+          </div>      
         </div>
+        <button type="button" class="navbar-toggler" data-bs-toggle="offcanvas" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <a href="#" class="btn btn-sm fs-sm rounded d-none d-lg-inline-flex" target="_blank" rel="noopener" style="background-color: #bf0a30;">
+          &nbsp;Más Información
+        </a>
+      </div>
     </header>
 
-        <!--=============== MAIN ===============-->
-        <main class="main">
-            <section class="filters container">
-                <!--=============== FILTERS TABS ===============-->
-                <ul class="filters_content">
-                    <button class="filters_button filter-tab-active" data-target="#projects">
-                        Clientes
-                    </button>
+    <!-- Hero + BG parallax -->
+    <section class="jarallax bg-dark min-vh-100" data-jarallax data-speed="0.4" data-bs-theme="dark">
+      <span class="position-absolute top-0 start-0 w-100 h-100" style="background: radial-gradient(116.18% 118% at 50% 100%, rgba(99, 102, 241, 0.1) 0%, rgba(218, 70, 239, 0.05) 41.83%, rgba(241, 244, 253, 0.07) 82.52%);"></span>
+      <div class="jarallax-img" style="background-image: url(assets/img/hero-bg/1.jpg);"></div>
+      <div class="min-vh-100 d-flex flex-column py-5">
 
-                    <button class="filters_button" data-target="#skills">
-                        Servicios
-                    </button>
-            </ul>
-
-                <div class="filters__sections">
-                    <!--=============== PROJECTS ===============-->
-                    <div class="projects_content grid filters_active" data-content id ="projects">
-                       
-                        <article class="projects_card">
-                            <img src="assets/img/project1.jpg" alt="" class="projects_img">
-                        <div class="projects_modal">
-                            <div>
-                                <h3 class="projects_title">Cliente #1</h3>
-                                <span class="projects_subtitle">Visa en 7 días.</span>
-                                <!-- <a href="#" class="projects_button button button_small">
-                                    <i class="ri-link"></i>
-                                </a> -->
-                            </div>
-                        </div>
-                    </article>
-
-                </div>
-
-                <!--=============== SKILLS ===============-->
-                <div class="skills_content grid " data-content id="skills">
-                    <div class="skills_area">
-                        <h3 class="skills_title">
-                            Visa de Turista
-                        </h3>
-
-                        <div class="skills_box">
-                            <div class="skills_group">
-                                <div class="skills_data">
-                                    <i class="ri-checkbox-circle-line"></i>
-
-                                    <div>
-                                        <h3 class="skills_name">#1</h3>
-                                        <span class="skills_level">Descripción</span>
-                                    </div>
-                                </div>
-
-                            </div>
-
-                            <div class="skills_group">
-                                <div class="skills_data">
-                                    <i class="ri-checkbox-circle-line"></i>
-
-                                    <div>
-                                        <h3 class="skills_name">#2</h3>
-                                        <span class="skills_level">Descripción</span>
-                                    </div>
-                                </div>
-
-
-
-                            </div>
-
-
-                        </div>
-                    </div>
-
-                    <div class="skills_area">
-                        <h3 class="skills_title">
-                            Visa Estudiante
-                        </h3>
-
-                        <div class="skills_box">
-                            <div class="skills_group">
-                                <div class="skills_data">
-                                    <i class="ri-checkbox-circle-line"></i>
-
-                                    <div>
-                                        <h3 class="skills_name">#1</h3>
-                                        <span class="skills_level">Descripción</span>
-                                    </div>
-                                </div>
-
-                            </div>
-
-                            <div class="skills_group">
-                                <div class="skills_data">
-                                    <i class="ri-checkbox-circle-line"></i>
-
-                                    <div>
-                                        <h3 class="skills_name">#2</h3>
-                                        <span class="skills_level">Descripción</span>
-                                    </div>
-                                </div>
-
-
-                            </div>
-
-
-                        </div>
-                    </div>
-
-                </div>
+        <div class="container position-relative text-center zindex-5 pt-4 pt-md-5 pb-5 mt-auto">
+          <div class="row mt-5">
+            <div class="col-xl-10 mx-auto">
+              <h1 class="mb-md-4 pb-3" style="
+                color: #bf0a30;
+                font-weight: bold;
+                text-shadow: -1px -1px 0 #ffffff, 1px -1px 0 #ffffff, -1px 1px 0 #ffffff, 1px 1px 0 #ffffff;
+            ">Nelly Pocón | Tramite de Visa de Turista y de Negocios | Renovaciones</h1>
+              <a href="#" class="btn btn-lg shadow-primary boton-animado" style="background-color: #bf0a30;">Más información</a>
             </div>
-        </section>
-    </main>
+          </div>
+        </div>
+        <div class="container mt-auto pb-lg-2 pb-xl-3">
 
-    <!--=============== FOOTER ===============-->
-    <footer class="footer container">
-        <a href="https://oscarleon.app/">
-            <span class="footer_copy">
-                    &#169; OSCARLEON. All rigths reserved
-                </span>
-        </a>
-    </footer>
+          <ul class="list-unstyled d-flex align-items-start justify-content-center flex-wrap text-nowrap mt-xl-0 mt-md-n4 mt-sm-n3 mt-n2 ms-md-n4 ms-n3 mb-0 pt-lg-5 pt-md-4">
+            <li class="d-flex align-items-center text-body mt-md-4 mt-sm-3 mt-2 ms-md-4 ms-3">
+              <i class="bx bx-check-circle me-2 fs-5 text-primary"></i>
+              Visa de Turista
+            </li>
+            <li class="d-flex align-items-center text-body mt-md-4 mt-sm-3 mt-2 ms-md-4 ms-3">
+              <i class="bx bx-check-circle me-2 fs-5 text-primary"></i>
+              Visa de Negocios
+            </li>
+            <li class="d-flex align-items-center text-body mt-md-4 mt-sm-3 mt-2 ms-md-4 ms-3">
+              <i class="bx bx-check-circle me-2 fs-5 text-primary"></i>
+              Renovaciones
+            </li>
+          </ul>
+          <p class="text-body mx-auto mb-md-5 mb-4 pb-xl-2 pb-md-0 pb-sm-2 fs-5 text-center" style="max-width: 36.5rem;">
+            Obtén tu visa y disfruta de todos los beneficios.
+          </p>
+        </div>
+      </div>
+    </section>
 
-    <!--=============== SCROLLREVEAL ===============-->
-    <script src="assets/js/scrollreveal.min.js"></script>
 
-    <!--=============== MAIN JS ===============-->
-    <script src="assets/js/main.js"></script>
-</body>
 
+    <!-- Social Links -->
+    <section class="container text-center my-2 my-md-4 my-lg-5">
+      <h2 class="h1 mb-4">Conoce más acerca de mi</h2>
+      <p class="fs-lg text-muted pb-2 mb-5">Estas son mis redes sociales</p>
+      
+      <div class="d-flex justify-content-center align-items-center flex-wrap gap-4">
+        
+        <!-- Item Tiktok -->
+        <div class="text-center">
+          <div class="position-relative text-center mx-2">
+            <a href="#" class="btn btn-icon btn-secondary btn-lg stretched-link" aria-label="Tiktok" target="_blank">
+              <i class="bi bi-facebook"></i>
+            </a>
+            <div class="pt-4">
+              <h6 class="mb-1">Facebook</h6>
+              <p class="fs-sm text-muted mb-0">Nelly</p>
+            </div>
+          </div>
+        </div>
+      
+        <!-- Item Instagram -->
+        <div class="text-center">
+          <div class="position-relative text-center mx-2">
+            <a href="#" class="btn btn-icon btn-secondary btn-lg stretched-link" aria-label="Instagram" target="_blank">
+              <i class="bi bi-instagram"></i>
+            </a>
+            <div class="pt-4">
+              <h6 class="mb-1">Instagram</h6>
+              <p class="fs-sm text-muted mb-0">Nelly</p>
+            </div>
+          </div>
+        </div>
+      
+        <!-- Item X -->
+        <div class="text-center">
+          <div class="position-relative text-center mx-2">
+            <a href="#" class="btn btn-icon btn-secondary btn-lg stretched-link" aria-label="X" target="_blank">
+              <i class="bi bi-tiktok"></i>
+            </a>
+            <div class="pt-4">
+              <h6 class="mb-1">Linkedin</h6>
+              <p class="fs-sm text-muted mb-0">Nelly</p>
+            </div>
+          </div>
+        </div>
+      </div>
+      
+      <div class="pb-5 pt-5"></div>
+      <p class="fs-lg text-muted pb-2 mb-5 pt-5 text-center">
+        Todos los Derechos Reservados a <b>Nelly Pocón</b> <br>
+        <span style="font-size: 16px;"> 
+          <a href="https://oscarleon.app/" style="text-decoration: none; color: #9397ad;">SEO, Diseño y Desarrollo Web por OSCARLEON</a>
+        </span>
+      </p>
+    </section>
+
+  </main>
+
+
+  <!-- Back to top button -->
+  <a href="#top" class="btn-scroll-top" data-scroll>
+    <span class="btn-scroll-top-tooltip text-muted fs-sm me-2">Top</span>
+    <i class="btn-scroll-top-icon bx bx-chevron-up"></i>
+  </a>
+
+    <!-- Vendor Scripts -->
+    <script src="assets/vendor/rellax/rellax.min.js"></script>
+    <script src="assets/vendor/@lottiefiles/lottie-player/dist/lottie-player.js"></script>
+    <script src="assets/vendor/swiper/swiper-bundle.min.js"></script>
+
+    <!-- Main Theme Script -->
+    <script src="assets/js/theme.min.js"></script>
+
+    <!-- Modal Script Reunión virtual -->
+    <script src="assets/js/modal-reunio.js"></script>
+    <script src="assets/js/modal-cotizacion.js"></script>
+  </body>
 </html>
-
-<!-- Tiempo
-26:06
--->
