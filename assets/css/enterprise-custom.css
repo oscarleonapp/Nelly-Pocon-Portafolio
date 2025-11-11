@@ -1,0 +1,258 @@
+/*
+ * Enterprise Custom Styles for Nelly Pocón Portfolio
+ * Professional design for visa processing services
+ */
+
+/* ==========================
+   GENERAL STYLES
+   ========================== */
+
+:root {
+  --primary-color: #1a365d;
+  --primary-dark: #0f2942;
+  --primary-light: #2d4a7c;
+  --secondary-color: #64748b;
+  --accent-color: #3b82f6;
+  --success-color: #10b981;
+  --background-light: #f8fafc;
+  --background-white: #ffffff;
+  --border-color: #e2e8f0;
+  --text-primary: #1a365d;
+  --text-secondary: #64748b;
+  --text-muted: #94a3b8;
+}
+
+body {
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
+  color: var(--text-secondary);
+  line-height: 1.6;
+}
+
+/* ==========================
+   NAVBAR STYLES
+   ========================== */
+
+.enterprise-navbar {
+  transition: all 0.3s ease;
+}
+
+.enterprise-navbar.navbar-stuck {
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1) !important;
+}
+
+.enterprise-logo {
+  transition: transform 0.3s ease;
+}
+
+.enterprise-logo:hover {
+  transform: translateY(-2px);
+}
+
+.enterprise-nav-link {
+  position: relative;
+  transition: color 0.3s ease;
+}
+
+.enterprise-nav-link:hover {
+  color: var(--primary-color) !important;
+}
+
+.enterprise-nav-link::after {
+  content: '';
+  position: absolute;
+  bottom: -5px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 0;
+  height: 2px;
+  background-color: var(--primary-color);
+  transition: width 0.3s ease;
+}
+
+.enterprise-nav-link:hover::after {
+  width: 60%;
+}
+
+.enterprise-btn-primary {
+  transition: all 0.3s ease;
+  box-shadow: 0 2px 8px rgba(26, 54, 93, 0.2);
+}
+
+.enterprise-btn-primary:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 4px 12px rgba(26, 54, 93, 0.3);
+  background-color: var(--primary-dark) !important;
+}
+
+/* ==========================
+   HERO SECTION
+   ========================== */
+
+.enterprise-hero-badge .badge {
+  transition: transform 0.3s ease;
+}
+
+.enterprise-hero-badge .badge:hover {
+  transform: scale(1.05);
+}
+
+.enterprise-btn-white {
+  transition: all 0.3s ease;
+}
+
+.enterprise-btn-white:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2) !important;
+}
+
+.enterprise-stat {
+  transition: transform 0.3s ease;
+}
+
+.enterprise-stat:hover {
+  transform: translateY(-4px);
+}
+
+.enterprise-hero-image {
+  transition: transform 0.3s ease;
+}
+
+.enterprise-hero-image:hover {
+  transform: scale(1.02);
+}
+
+/* ==========================
+   CARDS & SERVICES
+   ========================== */
+
+.enterprise-card {
+  transition: all 0.3s ease;
+  cursor: pointer;
+}
+
+.enterprise-card:hover {
+  transform: translateY(-8px);
+  box-shadow: 0 12px 40px rgba(0, 0, 0, 0.15) !important;
+  border-color: var(--primary-color) !important;
+}
+
+.enterprise-icon-box {
+  transition: transform 0.3s ease;
+}
+
+.enterprise-card:hover .enterprise-icon-box {
+  transform: scale(1.1) rotate(5deg);
+}
+
+/* ==========================
+   SOCIAL LINKS
+   ========================== */
+
+.enterprise-social-link {
+  transition: all 0.3s ease;
+}
+
+.enterprise-social-link:hover {
+  background-color: var(--primary-color) !important;
+  transform: translateY(-4px);
+  box-shadow: 0 6px 16px rgba(26, 54, 93, 0.3);
+}
+
+.enterprise-social-link:hover i {
+  color: #ffffff !important;
+}
+
+/* ==========================
+   BUTTONS
+   ========================== */
+
+.btn-outline-light:hover {
+  background-color: rgba(255, 255, 255, 0.2) !important;
+  border-color: rgba(255, 255, 255, 0.8) !important;
+}
+
+/* ==========================
+   ANIMATIONS
+   ========================== */
+
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.fade-in-up {
+  animation: fadeInUp 0.6s ease-out;
+}
+
+/* ==========================
+   RESPONSIVE DESIGN
+   ========================== */
+
+@media (max-width: 991.98px) {
+  .enterprise-hero-badge .badge {
+    font-size: 0.75rem;
+  }
+
+  .display-4 {
+    font-size: 2rem;
+  }
+
+  .enterprise-stat {
+    margin-bottom: 1rem;
+  }
+}
+
+@media (max-width: 767.98px) {
+  .enterprise-card {
+    margin-bottom: 1rem;
+  }
+
+  .enterprise-hero-image {
+    margin-top: 2rem;
+  }
+}
+
+/* ==========================
+   SCROLL BEHAVIOR
+   ========================== */
+
+html {
+  scroll-behavior: smooth;
+}
+
+/* ==========================
+   ACCESSIBILITY
+   ========================== */
+
+.enterprise-nav-link:focus,
+.enterprise-btn-primary:focus,
+.enterprise-social-link:focus {
+  outline: 2px solid var(--accent-color);
+  outline-offset: 2px;
+}
+
+/* ==========================
+   UTILITY CLASSES
+   ========================== */
+
+.text-enterprise-primary {
+  color: var(--primary-color) !important;
+}
+
+.bg-enterprise-primary {
+  background-color: var(--primary-color) !important;
+}
+
+.bg-enterprise-light {
+  background-color: var(--background-light) !important;
+}
+
+.border-enterprise {
+  border-color: var(--border-color) !important;
+}
